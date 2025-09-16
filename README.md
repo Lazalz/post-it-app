@@ -1,8 +1,4 @@
-# librairie installés
+# Notice
 
-- DaisyUI
-- Lucide React
-- React-router-dom
-- React-errorBoundary
-- Tailwindcss
+Ce projet est en cours de développement.
 
