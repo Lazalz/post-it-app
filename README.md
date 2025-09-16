@@ -1,4 +1,4 @@
 # Notice
 
-Ce projet est en cours de développement.
+Ce projet est en cours de développement
 
