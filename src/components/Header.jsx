@@ -85,7 +85,7 @@ const Header = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold">Laza LZ</h3>
+                    <h3 className="font-bold">User.name</h3>
                     <p className="text-xs opacity-40">Utilisateur</p>
                   </div>
                 </button>

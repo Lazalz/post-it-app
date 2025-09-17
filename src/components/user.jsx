@@ -5,7 +5,7 @@ export function User() {
   return (
     <UserProfile 
       user={{
-        name: "Laza LZ",
+        name: "Username",
         noteCount: 1002,
         avatar: "https://i.pravatar.cc/150?img=32"
       }} 
