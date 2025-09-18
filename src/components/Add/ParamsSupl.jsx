@@ -3,17 +3,20 @@ import { NewFolder } from "./NewFolder";
 import { useState } from "react";
 import { ExistingFolder } from "./ExistingFolder";
 
-export function ParamsSupl({ title, setTitle, color, setColor, onSave }) {
-  /* states dans le Newfolder */
-  const [newTitle, setNewTitle] = useState("");
-  const [newColor, setNewColor] = useState("bg-yellow-200");
+export function ParamsSupl() {
   const [openNewFolder, setOpenNewFolder] = useState(false);
   const handleOpenFolder = () => setOpenNewFolder(!openNewFolder);
+  const [folders, setFolders] = useState([]);
+
+  const handleAddFolder = (folder) => {
+    setFolders((prevFolders) => [...prevFolders, folder]);
+    setOpenNewFolder(false);
+  };
   return (
     <div className="card bg-base-100 shadow-sm p-4 mb-6">
       <div className="card-body p-0">
         <div>
-          <ExistingFolder />
+          <ExistingFolder folders={folders}/>
         </div>
         <div>
           <button
@@ -23,7 +26,7 @@ export function ParamsSupl({ title, setTitle, color, setColor, onSave }) {
             <Plus className="w-5 h-5" />
           </button>
 
-          {openNewFolder && <NewFolder title={newTitle} color={newColor}  />}
+          {openNewFolder && <NewFolder onAddFolder={handleAddFolder} />}
         </div>
       </div>
     </div>
