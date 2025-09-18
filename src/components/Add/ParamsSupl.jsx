@@ -4,6 +4,9 @@ import { useState } from "react";
 import { ExistingFolder } from "./ExistingFolder";
 
 export function ParamsSupl({ title, setTitle, color, setColor, onSave }) {
+  /* states dans le Newfolder */
+  const [newTitle, setNewTitle] = useState("");
+  const [newColor, setNewColor] = useState("bg-yellow-200");
   const [openNewFolder, setOpenNewFolder] = useState(false);
   const handleOpenFolder = () => setOpenNewFolder(!openNewFolder);
   return (
@@ -20,15 +23,7 @@ export function ParamsSupl({ title, setTitle, color, setColor, onSave }) {
             <Plus className="w-5 h-5" />
           </button>
 
-          {openNewFolder && (
-            <NewFolder
-              title={title}
-              setTitle={setTitle}
-              color={color}
-              setColor={setColor}
-              onSave={onSave}
-            />
-          )}
+          {openNewFolder && <NewFolder title={newTitle} color={newColor}  />}
         </div>
       </div>
     </div>

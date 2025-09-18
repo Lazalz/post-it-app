@@ -85,7 +85,6 @@ export function AddPost({ onAddPost }) {
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 onKeyDown={handleKeyDown}
-                
               />
             </div>
 
